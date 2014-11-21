@@ -29,8 +29,8 @@ Required parameters:
 ```php
 <?php
 'Twitter' => array(
-	'key' => 'YOUR CONSUMER KEY',
-	'secret' => 'YOUR CONSUMER SECRET'
+	'consumer_key' => 'YOUR CONSUMER KEY',
+	'consumer_secret' => 'YOUR CONSUMER SECRET'
 )
 ```
 

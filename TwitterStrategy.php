@@ -16,7 +16,7 @@ class TwitterStrategy extends OpauthStrategy {
 	/**
 	 * Compulsory parameters
 	 */
-	public $expects = array('key', 'secret');
+	public $expects = array('consumer_key', 'consumer_secret');
 	
 	/**
 	 * Optional parameters
@@ -57,9 +57,6 @@ class TwitterStrategy extends OpauthStrategy {
 	
 	public function __construct($strategy, $env) {
 		parent::__construct($strategy, $env);
-		
-		$this->strategy['consumer_key'] = $this->strategy['key'];
-		$this->strategy['consumer_secret'] = $this->strategy['secret'];
 		
 		require_once dirname(__FILE__).'/Vendor/tmhOAuth/tmhOAuth.php';
 		$this->tmhOAuth = new tmhOAuth($this->strategy);
